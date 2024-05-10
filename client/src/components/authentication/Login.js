@@ -76,14 +76,7 @@ function Login() {
     }
   };
 
-  const guestLogin = async ()=>{
 
-    try{
-
-    }catch(error){
-      
-    }
-  }
   return (
     <VStack spacing="5px" color="black">
       <FormControl isRequired>

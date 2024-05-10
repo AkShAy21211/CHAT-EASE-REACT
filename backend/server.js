@@ -14,7 +14,9 @@ const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(cores())
+app.use(cores({
+    origin:"http://localhost:3000",
+}))
 
 
 app.use('/user',userRoute)
