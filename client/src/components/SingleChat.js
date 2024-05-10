@@ -19,7 +19,8 @@ import axios from "axios";
 import "./style.css";
 import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
-const ENDPOINT = "http://localhost:5000";
+// const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chat-ease-react.onrender.com:5000"
 let socket, selectedChatCompare;
 
 function SingleChat({ fetchAgain, setFetchAgain }) {
@@ -73,7 +74,9 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
   };
 
   useEffect(() => {
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT,{
+      transports:["websocket"]
+    });
     socket.emit("setup", user);
     socket.on("connected", () => {
       setSocketConnected(true);
