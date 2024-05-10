@@ -20,7 +20,7 @@ import "./style.css";
 import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 // const ENDPOINT = "http://localhost:5000";
-const ENDPOINT = "https://chat-ease-react.onrender.com:5000"
+const ENDPOINT = "https://chat-ease-react.onrender.com"
 let socket, selectedChatCompare;
 
 function SingleChat({ fetchAgain, setFetchAgain }) {
