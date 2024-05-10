@@ -158,7 +158,7 @@ export default function SideDrawer() {
               {
                 notification.map((notify)=>(
                   
-                  <MenuItem key={notify._id} onClick={()=>{
+                  <MenuItem bg={'transparent'}  key={notify._id} onClick={()=>{
                     setSelectedChat(notify.chat)
                     setNOtifications(notification.filter((n)=> n!== notify))
 
