@@ -214,6 +214,8 @@ function Register() {
             <Button
               size="sm"
               h="1.5rem"
+                            color={'white'}
+
               _hover={{ bg: "transparent" }}
               bg={"transparent"}
               onClick={() => setShow((prev) => !prev)}
@@ -245,6 +247,7 @@ function Register() {
               _hover={{ bg: "transparent" }}
               size="sm"
               h="1.5rem"
+              color={'white'}
               onClick={() => setShow((prev) => !prev)}
             >
               {show ? "Hide" : "show"}

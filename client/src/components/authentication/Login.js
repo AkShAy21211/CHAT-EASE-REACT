@@ -114,6 +114,8 @@ function Login() {
               size="sm"
               _hover={{ bg: "transparent" }}
               bg={"transparent"}
+                            color={'white'}
+
               h="1.5rem"
               onClick={() => setShow((prev) => !prev)}
             >
