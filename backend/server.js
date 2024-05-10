@@ -31,7 +31,7 @@ if(process.env.NODE_ENV === 'production'){
 
     app.use(express.static(path.join(_directory,'/client/build')));
     app.get("*",(req,res)=>{
-        res.sendFile(path.relative(_directory,"client","build","index.html"))
+    res.render(path.relative(_directory,"client","build","index.html"))
     })
 }else{
 
