@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  border,
   Button,
   FormControl,
   FormLabel,
@@ -9,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function Register() {
   const [registerform, setRegisterForm] = useState({
@@ -34,7 +35,7 @@ function Register() {
   };
 
   const handleSubmit = async (e) => {
-        e.preventDefault()
+    e.preventDefault();
 
     const { name, email, password, confirmpassword } = registerform;
     setLoading(true);
@@ -79,21 +80,20 @@ function Register() {
         position: "bottom",
       });
 
-      localStorage.setItem('userInfo',JSON.stringify(data));
+      localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      navigate('/chats')
+      navigate("/chats");
     } catch (error) {
-
-       toast({
+      toast({
         title: "Error occured",
-        description:error.response.data.message,
+        description: error.response.data.message,
         status: "error",
         duration: 5000,
         isClosable: true,
         position: "bottom",
       });
-      
-      setLoading(false)
+
+      setLoading(false);
     }
   };
 
@@ -144,20 +144,19 @@ function Register() {
     }
   };
 
-
   return (
     <VStack spacing="5px" color="black">
       <FormControl>
         <FormLabel>Profile</FormLabel>
         <Input
-                    borderColor={"black"}
-
+          borderColor={"black"}
           color="white"
           name="picture"
           type="file"
-  focusBorderColor="black" // This will remove the blue border on click
-
+          focusBorderColor="black" // This will remove the blue border on click
           size="sm"
+          border={'1px'}
+          _hover={{border:"1px"}}
           p="1px"
           onChange={(e) => postDetails(e.target.files[0])}
         />
@@ -166,10 +165,10 @@ function Register() {
       <FormControl isRequired>
         <FormLabel>Name</FormLabel>
         <Input
-                    _placeholder={{color:"white"}}
-  focusBorderColor="black" // This will remove the blue border on click
-            borderColor={"black"}
-
+          _placeholder={{ color: "white" }}
+          focusBorderColor="white" // This will remove the blue border on click
+          borderColor={"white"}
+          _hover={{border:"1px",borderColor:"white"}}
           name="name"
           placeholder="Enter your name"
           type="string"
@@ -180,11 +179,11 @@ function Register() {
       <FormControl isRequired>
         <FormLabel>Email</FormLabel>
         <Input
-                    _placeholder={{color:"white"}}
-  focusBorderColor="black" // This will remove the blue border on click
-            borderColor={"black"}
-
+          _placeholder={{ color: "white" }}
+          focusBorderColor="white" // This will remove the blue border on click
           name="email"
+           borderColor={"white"}
+          _hover={{border:"1px",borderColor:"white"}}
           placeholder="Enter your email"
           type="string"
           onChange={onchange}
@@ -195,13 +194,12 @@ function Register() {
         <FormLabel>Password</FormLabel>
         <InputGroup>
           <Input
-                      _placeholder={{color:"white"}}
-  focusBorderColor="black" // This will remove the blue border on click
-            borderColor={"black"}
-
+            _placeholder={{ color: "white" }}
+            focusBorderColor="white" // This will remove the blue border on click
             name="password"
-                        _hover={{bg:"transparent"}}
-
+             borderColor={"white"}
+          _hover={{border:"1px",borderColor:"white"}}
+ 
             placeholder="Enter a password"
             type={show ? "string" : "password"}
             onChange={onchange}
@@ -210,8 +208,8 @@ function Register() {
             <Button
               size="sm"
               h="1.5rem"
-                   _hover={{bg:"transparent"}}
-                          bg={"transparent"}
+              _hover={{ bg: "transparent" }}
+              bg={"transparent"}
               onClick={() => setShow((prev) => !prev)}
             >
               {show ? "Hide" : "show"}
@@ -224,19 +222,19 @@ function Register() {
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup>
           <Input
-                      _placeholder={{color:"white"}}
-  focusBorderColor="black" // This will remove the blue border on click
-            borderColor={"black"}
-
+            _placeholder={{ color: "white" }}
+            focusBorderColor="white" // This will remove the blue border on click
             name="confirmpassword"
+             borderColor={"white"}
+          _hover={{border:"1px",borderColor:"white"}}
             placeholder="Confirm password"
             type={show ? "string" : "password"}
             onChange={onchange}
           />
           <InputRightElement w="4.5rem">
             <Button
-            bg={"transparent"}
-            _hover={{bg:"transparent"}}
+              bg={"transparent"}
+              _hover={{ bg: "transparent" }}
               size="sm"
               h="1.5rem"
               onClick={() => setShow((prev) => !prev)}
@@ -250,7 +248,13 @@ function Register() {
       <Button
         w="100%"
         mt="5px"
-        colorScheme="blue"
+        border={'1px'}
+        borderColor={'blue'}
+        bg={'transparent'}
+                 _hover={{bg:"transperent"}}
+
+        color={'white'}
+        _active={{bg:"transparent"}}
         isLoading={loading}
         onClick={handleSubmit}
       >

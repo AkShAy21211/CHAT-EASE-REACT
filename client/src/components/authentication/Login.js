@@ -80,10 +80,10 @@ function Login() {
   return (
     <VStack spacing="5px" color="black">
       <FormControl isRequired>
-        <FormLabel>Email</FormLabel>
+        <FormLabel color={'white'}>Email</FormLabel>
         <Input
-          borderColor={"black"}
-          focusBorderColor="black"
+          borderColor={"white"}
+          focusBorderColor="white"
           name="email"
           _placeholder={{ color: "white" }}
           defaultValue={loginForm.email}
@@ -94,15 +94,15 @@ function Login() {
       </FormControl>
 
       <FormControl isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel color={'white'}>Password</FormLabel>
         <InputGroup>
           <Input
-            borderColor={"black"}
+            borderColor={"white"}
             name="password"
-            _placeholder={{ color: "white" }}
+            _placeholder={{color: "white" }}
             defaultValue={loginForm.password}
             placeholder="Enter a password"
-            focusBorderColor="black"
+            focusBorderColor="white"
             type={show ? "string" : "password"}
             onChange={onchange}
           />
@@ -122,7 +122,12 @@ function Login() {
       <Button
         w="100%"
         mt="5px"
-        colorScheme="blue"
+        border={'1px'}
+        borderColor={'blue'}
+        bg={'transparent'}
+        color={'white'}
+        _hover={{bg:"transperent"}}
+        _active={{bg:"transperent"}}
         isLoading={loading}
         onClick={handleSubmit}
       >
@@ -130,7 +135,12 @@ function Login() {
       </Button>
       <Button
         w="100%"
-        colorScheme="yellow"
+        border={'1px'}
+        bg={'transparent'}
+         _hover={{bg:"transperent"}}
+        _active={{bg:"transperent"}}
+        color={'white'}
+        borderColor={'yellow'}
         onClick={(e) =>
           setloginForm({ email: "guest@gmail.com", password: "guest123" })
         }
