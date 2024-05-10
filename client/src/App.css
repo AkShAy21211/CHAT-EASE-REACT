@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.App{
+  min-height: 100vh;
+  display: flex;
+  background-image: url("./assests//OAWRX90.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: reg(136,136,136,136);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
