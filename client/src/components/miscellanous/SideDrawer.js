@@ -150,7 +150,7 @@ export default function SideDrawer() {
               <BellIcon color={"gold"} fontSize={"2xl"} m={1} />
               
             </MenuButton>
-            <MenuList p={4}>
+            <MenuList bg={'transparent'} color={'white'}     mt={'4'}  backdropFilter="blur(5px)" p={4}>
              
               {
                 !notification.length&& "no new messages"
@@ -206,19 +206,21 @@ export default function SideDrawer() {
         <DrawerContent
           style={{
             background: "transparent",
+            boxShadow:"1px 6px 5px gray",
             color: "white",
             backdropFilter: "blur(5px)",
           }}
         >
           <DrawerHeader
-            bg={"black"}
+            bg={""}
             display={"flex"}
-            justifyContent={"space-between"}
-            borderBottomWidth="1px"
+            color={'re'}
+            justifyContent={"end"}
+            borderBottomWidth="px"
           >
-            Search users <CloseButton onClick={onClose} />
+            <CloseButton onClick={onClose} />
           </DrawerHeader>
-          <DrawerBody bg={"black"}>
+          <DrawerBody bg={""}>
             <Box display="flex" pb="2">
               <Input
                 placeholder="Search users"

@@ -222,7 +222,13 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain,fetchMessages }) {
       </IconButton>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent
+        bg={'transparent'}
+        color={'white'}
+        border={'1px'}
+         backdropFilter= "blur(5px)"
+        
+        >
           <ModalHeader
             fontSize={"35px"}
             fontFamily={"sans-serif"}
@@ -273,7 +279,7 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain,fetchMessages }) {
               ) : (
                 seatchResult?.map((user) => (
                   <UserListItem
-                    color
+                 
                     key={user._id}
                     user={user}
                     handleFunction={() => handAddUser(user)}
@@ -283,7 +289,7 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain,fetchMessages }) {
             </FormControl>
           </ModalBody>
           <ModalFooter>
-            <Button onClick={() => handleDelete(user)} colorScheme="red">
+            <Button onClick={() => handleDelete(user)} color={'red'} colorScheme="" border={'1px'} borderColor={'red'}>
               Leav Group
             </Button>
           </ModalFooter>

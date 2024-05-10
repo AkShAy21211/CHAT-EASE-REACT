@@ -27,7 +27,7 @@ function Home() {
     },[navigate])
 
   return (
-    <Container maxW="xl" centerContent>
+    <Container maxW="xxl"   centerContent>
       <Box
         display="flex"
         justifyContent="center"

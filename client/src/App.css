@@ -4,7 +4,7 @@
 .App{
   min-height: 100vh;
   display: flex;
-  background-image: url("./assests//OAWRX90.jpg");
+  background-color: black;
   background-size: cover;
   background-position: center;
 }

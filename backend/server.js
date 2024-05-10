@@ -10,6 +10,7 @@ const path = require("path");
 const messageRoute = require("./routes/messageRoute");
 const { notFound, errorHandler } = require("./middleware/errorMiddlewares");
 db();
+
 const app = express();
 
 app.use(express.json());

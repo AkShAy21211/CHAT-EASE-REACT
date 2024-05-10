@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
+import send from "../animations/send.json"
 import { ChatState } from "../context/ChatProvider";
 import animation from "../animations/typing.json";
 import {
@@ -117,7 +118,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
   });
 
   const sendMessage = async (e) => {
-    if (e.key === "Enter" && newMessage) {
+    if ( newMessage) {
       socket.emit("stop typing", selectedChat._id);
       try {
         const config = {
@@ -214,7 +215,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
             flexDir="column"
             justifyContent="flex-end"
             p={3}
-            bg="#E8E8E8"
+            bg=""
             w="100%"
             h="100%"
             borderRadius="lg"
@@ -235,7 +236,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
                 </div>
               </>
             )}
-            <FormControl onKeyDown={sendMessage}>
+            <FormControl >
               {isTyping ? (
                 <Lottie
                   height={35}
@@ -246,13 +247,30 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
               ) : (
                 <></>
               )}
-              <Input
+              <div style={{display:"flex"}}>
+                <Input
                 type="text"
                 variant={"filled"}
                 placeholder="Enter a message"
+                bg={'transparent'}
+                backdropFilter="blur(5px)"
+                border={'2px'}
+                borderColor={'white'}
+                _hover={{bg:"transperent"}}
+                
                 onChange={typingHandler}
                 value={newMessage}
               />
+              <button type="submit" onClick={sendMessage}>
+                 <Lottie
+                  height={40}
+                  width={40}
+                  options={{ loop: true, animationData: send }}
+                  style={{ marginBottom: 5, marginLeft: 0 }}
+                />
+              </button>
+              </div>
+              
             </FormControl>
           </Box>
         </>
@@ -263,7 +281,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
           justifyContent={"center"}
           h={"100%"}
         >
-          <Text fontSize={"3xl"} pb={3} fontFamily={"sans-serif"}>
+          <Text fontSize={"2xl"} pb={3} fontFamily={"sans-serif"}>
             Click on a user to start chatting
           </Text>
         </Box>

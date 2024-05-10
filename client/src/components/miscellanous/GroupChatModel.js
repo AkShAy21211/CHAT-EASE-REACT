@@ -134,7 +134,10 @@ function GroupChatModel({ children }) {
       <span onClick={onOpen}>{children}</span>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent bg={"white"} p={2}>
+        <ModalContent bg={'transparent'}
+        color={'white'}
+        border={'1px'}
+         backdropFilter= "blur(5px)" p={2}>
           <ModalHeader
             fontSize={"25px"}
             fontFamily={"sans-serif"}
@@ -164,6 +167,7 @@ function GroupChatModel({ children }) {
             <Box display={"flex"} w={"100%"} flexWrap={"wrap"}>
               {selectedUsers?.map((user) => (
                 <UserBadge
+                
                   key={user._id}
                   user={user}
                   handleFunction={() => handleDelete(user)}
@@ -182,14 +186,14 @@ function GroupChatModel({ children }) {
                   user={user}
                   key={user._id}
                   bg
-                  color
+                  
                   handleFunction={() => handleGroup(user)}
                 ></UserListItem>
               ))
           )}
 
           <ModalFooter>
-            <Button colorScheme="blue" onClick={handleSubmit}>
+            <Button colorScheme="" border={'1px'} onClick={handleSubmit}>
               Create Chat
             </Button>
           </ModalFooter>
