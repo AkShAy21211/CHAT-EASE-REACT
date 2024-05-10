@@ -220,7 +220,7 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain,fetchMessages }) {
       >
         Open
       </IconButton>
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+      <Modal size={'sm'} isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent
         bg={'transparent'}

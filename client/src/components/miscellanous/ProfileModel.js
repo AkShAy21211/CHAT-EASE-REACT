@@ -25,7 +25,7 @@ function ProfileModel({user,children}) {
          
         )
      }
-      <Modal  size="lg" isCentered isOpen={isOpen} onClose={onClose}>
+      <Modal  size="sm" isCentered isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent bg={'transparent'}
         color={'white'}
@@ -49,7 +49,7 @@ function ProfileModel({user,children}) {
             src={user.picture}
             alt={user.name}
             />
-            <Text>
+            <Text mt={'4'}>
                 {user.email}
             </Text>
           </ModalBody>

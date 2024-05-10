@@ -132,7 +132,7 @@ function GroupChatModel({ children }) {
   return (
     <>
       <span onClick={onOpen}>{children}</span>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal size={'sm'} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent bg={'transparent'}
         color={'white'}
