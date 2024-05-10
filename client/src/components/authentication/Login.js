@@ -85,6 +85,7 @@ function Login() {
           borderColor={"white"}
           focusBorderColor="white"
           name="email"
+          color={'white'}
           _placeholder={{ color: "white" }}
           defaultValue={loginForm.email}
           placeholder="Enter your email"
@@ -99,6 +100,8 @@ function Login() {
           <Input
             borderColor={"white"}
             name="password"
+                      color={'white'}
+
             _placeholder={{color: "white" }}
             defaultValue={loginForm.password}
             placeholder="Enter a password"

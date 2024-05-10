@@ -165,6 +165,8 @@ function Register() {
       <FormControl isRequired>
         <FormLabel>Name</FormLabel>
         <Input
+                  color={'white'}
+
           _placeholder={{ color: "white" }}
           focusBorderColor="white" // This will remove the blue border on click
           borderColor={"white"}
@@ -179,6 +181,8 @@ function Register() {
       <FormControl isRequired>
         <FormLabel>Email</FormLabel>
         <Input
+                  color={'white'}
+
           _placeholder={{ color: "white" }}
           focusBorderColor="white" // This will remove the blue border on click
           name="email"
@@ -194,6 +198,8 @@ function Register() {
         <FormLabel>Password</FormLabel>
         <InputGroup>
           <Input
+                    color={'white'}
+
             _placeholder={{ color: "white" }}
             focusBorderColor="white" // This will remove the blue border on click
             name="password"
@@ -222,6 +228,8 @@ function Register() {
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup>
           <Input
+                    color={'white'}
+
             _placeholder={{ color: "white" }}
             focusBorderColor="white" // This will remove the blue border on click
             name="confirmpassword"
