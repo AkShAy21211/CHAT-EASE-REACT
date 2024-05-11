@@ -163,7 +163,7 @@ function Register() {
       </FormControl>
 
       <FormControl isRequired>
-        <FormLabel>Name</FormLabel>
+        <FormLabel color={'white'}>Name</FormLabel>
         <Input
                   color={'white'}
 
@@ -179,7 +179,7 @@ function Register() {
       </FormControl>
 
       <FormControl isRequired>
-        <FormLabel>Email</FormLabel>
+        <FormLabel color={'white'}>Email</FormLabel>
         <Input
                   color={'white'}
 
@@ -195,7 +195,7 @@ function Register() {
       </FormControl>
 
       <FormControl isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel color={'white'}>Password</FormLabel>
         <InputGroup>
           <Input
                     color={'white'}
@@ -227,7 +227,7 @@ function Register() {
       </FormControl>
 
       <FormControl isRequired>
-        <FormLabel>Confirm Password</FormLabel>
+        <FormLabel color={'white'}>Confirm Password</FormLabel>
         <InputGroup>
           <Input
                     color={'white'}
